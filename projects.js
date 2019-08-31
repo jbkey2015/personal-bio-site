@@ -8,6 +8,15 @@ var projects = [
         url: "https://github.com/jbkey2015",
         githubUrl: "https://github.com/jbkey2015",
       },
+      {
+        title: "Not Cool Project", 
+        screenshot: "http://gotoflashgames.com/files/file/033.jpg", 
+        description: "This is the best project", // A good project description includes 'the what', 'the why', and 'the how'.
+        technologiesUsed: "HTML, CSS, Vanilla JavaScript, Version Control with Github",
+        available: false,
+        url: "https://github.com/jbkey2015",
+        githubUrl: "https://github.com/jbkey2015",
+      },
 ];
 
 const printToDom = (message, divId) => {
@@ -15,10 +24,11 @@ const printToDom = (message, divId) => {
 }
 
 const createProjectCards = (projectsArray) => {
-    let stringToPrint = '';
+    let stringToPrint = '';    
     for (let i = 0; i < projectsArray.length; i ++) {
         const project = projectsArray[i]
-        stringToPrint = `
+        if (project.available) {
+        stringToPrint += `
         <div class = "projectPage">
           <h2>${project.title}</h2>
           <img src = ${project.screenshot}>
@@ -29,8 +39,9 @@ const createProjectCards = (projectsArray) => {
           <a href = ${project.githubUrl}>GitHub</a>
         </div>
           `
-    }
+    }  
+  }
     printToDom(stringToPrint, 'projectsPage')
 }
 
-createProjectCards(projects);
+createProjectCards(projects)
