@@ -44,4 +44,35 @@ const createProjectCards = (projectsArray) => {
     printToDom(stringToPrint, 'projectsPage')
 }
 
-createProjectCards(projects)
+
+
+const linkButtons = () => {
+  const buttons = document.getElementsByTagName("button");
+  for (i=0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', (event) => {
+      const buttonType = event.target.id;
+      event.preventDefault();
+      if (buttonType === "navToBio") {
+        technologiesPage.setAttribute('style', 'display:none');
+        projectsPage.setAttribute('style', 'display:none');
+        bioPage.setAttribute('style', 'display:block')
+      } else if (buttonType === "navToTechnologies") {
+        bioPage.setAttribute('style', 'display:none');
+        projectsPage.setAttribute('style', 'display:none');
+        technologiesPage.setAttribute('style', 'display:block')
+      } else if (buttonType === "navToProjects") {
+        technologiesPage.setAttribute('style', 'display:none');
+        bioPage.setAttribute('style', 'display:none');
+        projectsPage.setAttribute('style', 'display:block')
+      } 
+    })
+  }
+};
+
+
+const init = () => {
+  createProjectCards(projects)
+  window.addEventListener('click', linkButtons);
+};
+
+init()
