@@ -5,9 +5,7 @@ This is an informational site about myself, where you can learn about my story a
 
 
 ## Screenshots
-![Personal Bio Preview]()
-
-
+![Personal Bio Preview](https://raw.githubusercontent.com/jbkey2015/personal-bio-site/master/screenshots/Annotation%202019-10-08%20083025.png)
 
 ## How to run
 * Clone down this project
