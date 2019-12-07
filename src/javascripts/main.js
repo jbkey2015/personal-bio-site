@@ -1,9 +1,10 @@
 import 'bootstrap';
 import '../styles/main.scss';
+import projects from './components/projects';
 
 
 const init = () => {
-  console.error('hi');
+  projects.createProjectCards(projects);
 };
 
 init();
