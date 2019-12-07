@@ -1,0 +1,26 @@
+{
+  "project1": {
+    "title": "Cool Project",
+    "imageUrl": "http://gotoflashgames.com/files/file/033.jpg",
+    "description": "This is the best project",
+    "technoligiesUsed": "HTML, CSS, Vanilla JavaScript, Version Control with Github",
+    "url": "https://github.com/jbkey2015",
+    "githubUrl": "https://github.com/jbkey2015"
+  },
+  "project2": {
+    "title": "Cool Project",
+    "imageUrl": "http://gotoflashgames.com/files/file/033.jpg",
+    "description": "This is the best project",
+    "technoligiesUsed": "HTML, CSS, Vanilla JavaScript, Version Control with Github",
+    "url": "https://github.com/jbkey2015",
+    "githubUrl": "https://github.com/jbkey2015"
+  },
+  "project3": {
+    "title": "Cool Project",
+    "imageUrl": "http://gotoflashgames.com/files/file/033.jpg",
+    "description": "This is the best project.",
+    "technoligiesUsed": "HTML, CSS, Vanilla JavaScript, Version Control with Github",
+    "url": "https://github.com/jbkey2015",
+    "githubUrl": "https://github.com/jbkey2015"
+  }
+}
