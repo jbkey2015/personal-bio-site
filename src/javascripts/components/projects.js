@@ -2,25 +2,27 @@ import util from '../helpers/utilities';
 import projectsData from '../helpers/data/projectsData';
 
 
-const createProjectCards = (projectsArray) => {
-  let stringToPrint = '';
-  // eslint-disable-next-line no-plusplus
-  for (let i = 0; i < projectsArray.length; i++) {
-    const project = projectsArray[i];
-    if (project.available) {
-      stringToPrint += `
-        <div class = "projectPage">
-          <h2>${project.title}</h2>
-          <img src = ${project.imageUrl}>
-          <p>${project.description}</p>
-          <p>${project.technoligiesUsed}</p>
-          <a href = ${project.url}>URL</a>
-          <a href = ${project.githubUrl}>GitHub</a>
+const createProjectCards = (projectsArr) => {
+  let domString = '<div class="row justify-content-between">';
+  for (let i = 0; i < projectsArr.length; i += 1) {
+    const currentProject = projectsArr[i];
+    if (currentProject.available) {
+      domString += `
+        <div class="project-card center card p-2 col-4">
+            <h3 class="card-title">${currentProject.title}</h3>
+            <img src="${currentProject.imageUrl}" class="card-img-top img-fluid">
+            <p class="card-text">${currentProject.description}</p>
+            <p class="card-text">${currentProject.technologiesUsed}</p>
+            <div class="card-body list-group">
+                <a href="${currentProject.url}" class="list-group-item list-group-item-action">Click to View - URL</a> 
+                <a href="${currentProject.githubUrl}" class=" list-group-item list-group-item-action">Click to View - GitHub</a>
+            </div>
         </div>
         `;
     }
   }
-  util.printToDom(stringToPrint, 'projectsPage');
+  domString += '</div>';
+  return domString;
 };
 
 const printProjects = () => {
@@ -32,5 +34,67 @@ const printProjects = () => {
     .catch((error) => console.error(error));
 };
 
+const init = () => {
+  const selectTechnologies = document.getElementById('technologiesPage');
+  const selectBio = document.getElementById('bioPage');
+  const selectProjects = document.getElementById('projectsPage');
 
-export default { printProjects };
+  const technologyDisplayed = () => {
+    if (selectTechnologies.style.display === 'none') {
+      selectTechnologies.style.display = 'block';
+      selectBio.style.display = 'none';
+      selectProjects.style.display = 'none';
+    } else {
+      selectTechnologies.style.display = 'block';
+      selectBio.style.display = 'none';
+      selectProjects.style.display = 'none';
+    }
+  };
+
+  const bioDisplayed = () => {
+    if (selectBio.style.display === 'none') {
+      selectTechnologies.style.display = 'none';
+      selectBio.style.display = 'block';
+      selectProjects.style.display = 'none';
+    } else {
+      selectTechnologies.style.display = 'none';
+      selectBio.style.display = 'block';
+      selectProjects.style.display = 'none';
+    }
+  };
+
+  const projectsDisplayed = () => {
+    if (selectProjects.style.display === 'none') {
+      selectTechnologies.style.display = 'none';
+      selectBio.style.display = 'none';
+      selectProjects.style.display = 'block';
+    } else {
+      selectTechnologies.style.display = 'none';
+      selectBio.style.display = 'none';
+      selectProjects.style.display = 'block';
+    }
+  };
+
+  const addListeners = () => {
+    document.body.addEventListener('click', (e) => {
+      if (e.target.id === 'Technologies') {
+        technologyDisplayed();
+      } else if (e.target.id === 'Bio') {
+        bioDisplayed();
+      } else if (e.target.id === 'Projects') {
+        projectsDisplayed();
+      } else if (e.target.id === 'Home') {
+        if (selectBio.style.display === 'none' || selectTechnologies.style.display === 'none') {
+          selectTechnologies.style.display = 'block';
+          selectBio.style.display = 'block';
+          selectProjects.style.display = 'block';
+        }
+      }
+    });
+  };
+
+  printProjects();
+  addListeners();
+};
+
+export default { init, printProjects };
