@@ -1,4 +1,6 @@
 import util from '../helpers/utilities';
+import projectsData from '../helpers/data/projectsData';
+
 
 const createProjectCards = (projectsArray) => {
   let stringToPrint = '';
@@ -9,18 +11,26 @@ const createProjectCards = (projectsArray) => {
       stringToPrint += `
         <div class = "projectPage">
           <h2>${project.title}</h2>
-          <img src = ${project.screenshot}>
+          <img src = ${project.imageUrl}>
           <p>${project.description}</p>
           <p>${project.technoligiesUsed}</p>
-          <p>${project.available}</p>
           <a href = ${project.url}>URL</a>
           <a href = ${project.githubUrl}>GitHub</a>
         </div>
-          `;
+        `;
     }
   }
   util.printToDom(stringToPrint, 'projectsPage');
 };
 
+const printProjects = () => {
+  projectsData.getProjects()
+    .then((projects) => {
+      const projectCards = createProjectCards(projects);
+      util.printToDom('projectsPage', projectCards);
+    })
+    .catch((error) => console.error(error));
+};
 
-export default { createProjectCards };
+
+export default { printProjects };
