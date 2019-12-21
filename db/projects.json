@@ -4,6 +4,7 @@
     "imageUrl": "http://gotoflashgames.com/files/file/033.jpg",
     "description": "This is the best project",
     "technoligiesUsed": "HTML, CSS, Vanilla JavaScript, Version Control with Github",
+    "available": true,
     "url": "https://github.com/jbkey2015",
     "githubUrl": "https://github.com/jbkey2015"
   },
@@ -12,6 +13,7 @@
     "imageUrl": "http://gotoflashgames.com/files/file/033.jpg",
     "description": "This is the best project",
     "technoligiesUsed": "HTML, CSS, Vanilla JavaScript, Version Control with Github",
+    "available": true,
     "url": "https://github.com/jbkey2015",
     "githubUrl": "https://github.com/jbkey2015"
   },
@@ -20,6 +22,7 @@
     "imageUrl": "http://gotoflashgames.com/files/file/033.jpg",
     "description": "This is the best project.",
     "technoligiesUsed": "HTML, CSS, Vanilla JavaScript, Version Control with Github",
+    "available": false,
     "url": "https://github.com/jbkey2015",
     "githubUrl": "https://github.com/jbkey2015"
   }
