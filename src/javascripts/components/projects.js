@@ -1,100 +1,20 @@
-import util from '../helpers/utilities';
-import projectsData from '../helpers/data/projectsData';
+import utilities from '../helpers/utilities';
+import projectData from '../helpers/data/projectsData';
+import projectsCard from './projectsCard/projectsCard';
 
 
-const createProjectCards = (projectsArr) => {
-  let domString = '<div class="row justify-content-between">';
-  for (let i = 0; i < projectsArr.length; i += 1) {
-    const currentProject = projectsArr[i];
-    if (currentProject.available) {
-      domString += `
-        <div class="project-card center card p-2 col-4">
-            <h3 class="card-title">${currentProject.title}</h3>
-            <img src="${currentProject.imageUrl}" class="card-img-top img-fluid">
-            <p class="card-text">${currentProject.description}</p>
-            <p class="card-text">${currentProject.technologiesUsed}</p>
-            <div class="card-body list-group">
-                <a href="${currentProject.url}" class="list-group-item list-group-item-action">Click to View - URL</a> 
-                <a href="${currentProject.githubUrl}" class=" list-group-item list-group-item-action">Click to View - GitHub</a>
-            </div>
-        </div>
-        `;
-    }
-  }
-  domString += '</div>';
-  return domString;
-};
-
-const printProjects = () => {
-  projectsData.getProjects()
-    .then((projects) => {
-      const projectCards = createProjectCards(projects);
-      util.printToDom('projectsPage', projectCards);
+const buildProjects = () => {
+  projectData.getProjects()
+    .then((project) => {
+      let domString = '<h1 id="projectTitle" class="text-center">WHAT I\'VE DONE</h1> <hr id="underline">';
+      project.forEach((board) => {
+        domString += '<di class="container">';
+        domString += projectsCard.createProjectCards(board);
+      });
+      utilities.printToDom('projectsPage', domString);
+      domString += '</div>';
     })
     .catch((error) => console.error(error));
 };
 
-const init = () => {
-  const selectTechnologies = document.getElementById('technologiesPage');
-  const selectBio = document.getElementById('bioPage');
-  const selectProjects = document.getElementById('projectsPage');
-
-  const technologyDisplayed = () => {
-    if (selectTechnologies.style.display === 'none') {
-      selectTechnologies.style.display = 'block';
-      selectBio.style.display = 'none';
-      selectProjects.style.display = 'none';
-    } else {
-      selectTechnologies.style.display = 'block';
-      selectBio.style.display = 'none';
-      selectProjects.style.display = 'none';
-    }
-  };
-
-  const bioDisplayed = () => {
-    if (selectBio.style.display === 'none') {
-      selectTechnologies.style.display = 'none';
-      selectBio.style.display = 'block';
-      selectProjects.style.display = 'none';
-    } else {
-      selectTechnologies.style.display = 'none';
-      selectBio.style.display = 'block';
-      selectProjects.style.display = 'none';
-    }
-  };
-
-  const projectsDisplayed = () => {
-    if (selectProjects.style.display === 'none') {
-      selectTechnologies.style.display = 'none';
-      selectBio.style.display = 'none';
-      selectProjects.style.display = 'block';
-    } else {
-      selectTechnologies.style.display = 'none';
-      selectBio.style.display = 'none';
-      selectProjects.style.display = 'block';
-    }
-  };
-
-  const addListeners = () => {
-    document.body.addEventListener('click', (e) => {
-      if (e.target.id === 'Technologies') {
-        technologyDisplayed();
-      } else if (e.target.id === 'Bio') {
-        bioDisplayed();
-      } else if (e.target.id === 'Projects') {
-        projectsDisplayed();
-      } else if (e.target.id === 'Home') {
-        if (selectBio.style.display === 'none' || selectTechnologies.style.display === 'none') {
-          selectTechnologies.style.display = 'block';
-          selectBio.style.display = 'block';
-          selectProjects.style.display = 'block';
-        }
-      }
-    });
-  };
-
-  printProjects();
-  addListeners();
-};
-
-export default { init, printProjects };
+export default { buildProjects };
