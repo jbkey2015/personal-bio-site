@@ -30,4 +30,5 @@ const buildNav = () => {
   utilities.printToDom('navbar', domString);
 };
 
+
 export default { buildNav };

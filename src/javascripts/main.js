@@ -7,6 +7,7 @@ import navbar from './components/navBar/navBar';
 const init = () => {
   projects.buildProjects();
   navbar.buildNav();
+  navbar.buttons();
 };
 
 init();
