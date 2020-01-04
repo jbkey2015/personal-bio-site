@@ -3,3 +3,32 @@
 body {
   background-color: slategray;
 }
+
+.introInfo {
+  text-align: center;
+  h1 {
+      font-size: 5.5rem;
+      margin-top: 265;
+  }
+  h4 {
+      margin-top: 30;
+  }
+  .introInfoButton {
+      margin-top: 50;
+  }
+}
+
+#homePage {
+  background-image: url(https://images.pexels.com/photos/583846/pexels-photo-583846.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  padding-top: 55px;
+  height: 100vh;
+  overflow: auto;
+  .introInfo h1,
+  .introInfo h4,
+  .introInfo a {
+      color: rgb(208, 224, 224);
+  }
+  .introInfo a:hover {
+      color: white;
+  }
+}
