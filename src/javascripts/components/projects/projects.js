@@ -1,6 +1,6 @@
-import utilities from '../helpers/utilities';
-import projectData from '../helpers/data/projectsData';
-import projectsCard from './projectsCard/projectsCard';
+import utilities from '../../helpers/utilities';
+import projectData from '../../helpers/data/projectsData';
+import projectsCard from '../projectsCard/projectsCard';
 
 
 const buildProjects = () => {
