@@ -1,3 +1,5 @@
+import './projectsCard.scss';
+
 const createProjectCards = (projects) => {
   let domString = '';
   domString += `
