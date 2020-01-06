@@ -1,0 +1,64 @@
+.projectTitle{
+  color: #000;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.projectInfo{
+  font-size: 20px;
+}
+
+.projectClick{
+  font-size: 20px;
+  color: crimson;
+  font-weight: bold;
+}
+
+.projectImg{
+width: 800px;
+
+// border: 1px solid #000;
+}
+
+// .projectImg:hover {  
+//   -webkit-filter: grayscale(0%);
+//   filter: grayscale(0%);
+// }
+
+.projectContents{
+  padding-top: 100px;
+  // border: 1px solid #000;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .projectImg{
+    width: 375px;
+  }
+
+  .projectContents{
+    width: 300px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}

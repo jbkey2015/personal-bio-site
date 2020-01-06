@@ -1,11 +1,11 @@
 {
   "project1": {
-    "title": "Cool Project",
-    "imageUrl": "http://gotoflashgames.com/files/file/033.jpg",
-    "description": "This is the best project",
-    "technoligiesUsed": "HTML, CSS, Vanilla JavaScript, Version Control with Github",
-    "url": "https://github.com/jbkey2015",
-    "githubUrl": "https://github.com/jbkey2015"
+    "title": "Sandwich Maker",
+    "imageUrl": "https://raw.githubusercontent.com/jbkey2015/sandwich-maker/master/screenshots/Annotation%202019-09-30%20174658.png",
+    "description": "Build a sandwich of your choice and adds total cost",
+    "technoligiesUsed": "HTML, CSS, Javascript, Bootstrap",
+    "url": "https://sandwich-maker-e0a22.firebaseapp.com/",
+    "githubUrl": "https://github.com/jbkey2015/sandwich-maker"
   },
   "project2": {
     "title": "Cool Project",
