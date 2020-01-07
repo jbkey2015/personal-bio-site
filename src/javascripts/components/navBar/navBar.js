@@ -15,7 +15,7 @@ const buildNav = () => {
         <a class="nav-link" id="navLink" href="#bioPage">ABOUT</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" id="navLink" href="#technoligiesPage">SKILLS</a>
+        <a class="nav-link" id="navLink" href="#technologiesPage">SKILLS</a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" id="navLink" href="#projectsPage">PROJECTS</a>

@@ -8,12 +8,12 @@
     "githubUrl": "https://github.com/jbkey2015/sandwich-maker"
   },
   "project2": {
-    "title": "Cool Project",
-    "imageUrl": "http://gotoflashgames.com/files/file/033.jpg",
-    "description": "This is the best project",
+    "title": "Solar System",
+    "imageUrl": "https://raw.githubusercontent.com/jbkey2015/solar-system/master/screenshots/Annotation%202019-11-06%20082959.png",
+    "description": "View the planets of our solar system and see a description for each.",
     "technoligiesUsed": "HTML, CSS, Vanilla JavaScript, Version Control with Github",
-    "url": "https://github.com/jbkey2015",
-    "githubUrl": "https://github.com/jbkey2015"
+    "url": "https://solar-system-f0d70.firebaseapp.com/",
+    "githubUrl": "https://github.com/jbkey2015/solar-system"
   },
   "project3": {
     "title": "Cool Project",
