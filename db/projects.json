@@ -16,11 +16,19 @@
     "githubUrl": "https://github.com/jbkey2015/solar-system"
   },
   "project3": {
-    "title": "Cool Project",
-    "imageUrl": "http://gotoflashgames.com/files/file/033.jpg",
-    "description": "This is the best project.",
+    "title": "Nautilus Explorer",
+    "imageUrl": "https://raw.githubusercontent.com/nss-evening-cohort-10/nutshell-nautilus-explorer/master/src/assets/images/homepage-screenshot.png",
+    "description": "This app allows you to keep track of and update the vessel's crew members, destinations, species discovered, environmental data, crew and captains logs, and past and future excursions.",
     "technoligiesUsed": "HTML, CSS, Vanilla JavaScript, Version Control with Github",
-    "url": "https://github.com/jbkey2015",
-    "githubUrl": "https://github.com/jbkey2015"
+    "url": "https://nautilus-explorer-part2.firebaseapp.com",
+    "githubUrl": "https://github.com/nss-evening-cohort-10/nutshell-nautilus-explorer"
+  },
+  "project4": {
+    "title": "Renaissance Fair",
+    "imageUrl": "https://github.com/nss-evening-cohort-10/nutshell-renaissance-fair/blob/master/src/javascripts/helpers/Screenshot%201.PNG?raw=true",
+    "description": "A dashboard for the owners to keep track of the Food, Souvenirs, Shows, and Staff they have available across all locations.",
+    "technoligiesUsed": "HTML, CSS, Vanilla JavaScript, Version Control with Github",
+    "url": "https://freelancer-redux.firebaseapp.com/",
+    "githubUrl": "https://github.com/nss-evening-cohort-10/nutshell-renaissance-fair"
   }
 }
