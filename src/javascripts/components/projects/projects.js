@@ -12,7 +12,7 @@ const buildProjects = () => {
         domString += projectsCard.createProjectCards(board);
       });
       utilities.printToDom('projectsPage', domString);
-      domString += '</div>';
+      domString += '</di>';
     })
     .catch((error) => console.error(error));
 };
