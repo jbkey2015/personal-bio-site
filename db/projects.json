@@ -25,7 +25,7 @@
   },
   "project4": {
     "title": "Renaissance Fair",
-    "imageUrl": "https://github.com/nss-evening-cohort-10/nutshell-renaissance-fair/blob/master/src/javascripts/helpers/Screenshot%201.PNG?raw=true",
+    "imageUrl": "https://raw.githubusercontent.com/jbkey2015/personal-bio-site/master/screenshots/Ren%20Fair2.png",
     "description": "A dashboard for the owners to keep track of the Food, Souvenirs, Shows, and Staff they have available across all locations.",
     "technoligiesUsed": "HTML, CSS, Vanilla JavaScript, Version Control with Github",
     "url": "https://freelancer-redux.firebaseapp.com/",
