@@ -11,6 +11,7 @@ const createProjectCards = (projects) => {
   <h4 class="projectTitle">${projects.title}</h4>
     <p class="projectInfo">${projects.description}</p>  
     <p class="projectInfo"><strong>Technologies Used:</strong> ${projects.technoligiesUsed}</p>
+    <a href="${projects.githubUrl}" class="projectInfo">GitHub</a>
   </div>
 </div>
       `;
